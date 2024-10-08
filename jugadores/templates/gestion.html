@@ -1,0 +1,39 @@
+<!-- ARVHIVO PARA INGRESAR NUEVOS JUGADORES -->
+{% extends "./base.html" %}
+
+{% block title %} Regirstrar Jugador {% endblock %}
+
+{% block body %}
+<div class="justify-content-md-end">
+    <a href="/login/listar/" class="btn btn-primary">&#11013;Regresar</a>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 container">
+    <h2 align="center">Gestion de Jugadores</h2>
+    <div class="card bg-warning">
+        <form  action="/login/listar/registrar/" method="POST"> {% csrf_token %}
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" name="txtCodigo" id="txtCodigo" placeholder="Codigo" minlength="6" maxlength="6" required>
+                <label for="floatingInput">Codigo</label>
+              </div>
+              
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="Nombre" maxlength="50" required>
+                <label for="floatingPassword">Nombre</label>
+              </div>
+              
+
+
+              <div class="form-floating mb-4">
+                <input type="text" class="form-control" name="txtNumero" id="txtNumero" placeholder="Numero de Camiseta" maxlength="3">
+                <label for="floatingPassword">Numero de Camiseta</label>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block text-white form-control btn-outline-primary"> Registrar</button>
+              </div>
+        </form>
+    </div>
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="shortcut icon" href=" {% static 'images/pumas-logo.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sesion.css' %}">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fira+Sans+Condensed:wght@200&family=Roboto:wght@700&family=Whisper&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+<!-- Header del documento -->
+    <header class="index-header">
+        <div class="index-header-back">
+           <a class="a-gradient" href=".."><p class="arrow-back">&#8592</p></a> 
+        </div>
+        
+    </header>
+    <!-- Formulario de Registro -->
+    <section class="login-section">
+        <form action="/login/validar/" method="post">
+            {% csrf_token %}
+            <!-- Titulo -->
+            <h2 class="login-title">Iniciar Sesión</h2>
+            <table class="login-formulario">
+                <tr>
+                    <!-- Campo de Correo -->
+                    <td class="login-formulario-label"><label for="email">Correo:</label></td>
+                    <td class="login-formulario-centrado"><input type="email" placeholder="Correo Electronico" id="user" name="email" required></td>
+                </tr>
+                <tr>
+                    <!-- Campo para Contraseña -->
+                    <td class="login-formulario-label"><label for="pass">Contraseña:</label></td>
+                    <td class="login-formulario-centrado"><input type="password" placeholder="Contraseña" id="pass" name="pass" required></td>
+                </tr>
+                <tr>
+                    <!-- Boton de Ingresar -->
+                    <td colspan="2" class="login-formulario-boton"><input type="submit" name="enviar" value="Ingresar"></td>
+                </tr>
+            </table>
+        </form>
+        
+           
+    </section>
+    
+</body>
+</html>
+{% endblock %}

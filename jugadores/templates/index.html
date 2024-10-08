@@ -1,0 +1,110 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'images/pumas-logo.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Fuentes de letras -->
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <!-- Header del documento -->
+    <header class="index-header">
+        <div class="index-header-logo">
+           <a href="#"><img src="{% static 'images/pumas-logo.jpg' %}"></a> 
+        </div>
+        
+        <div class="index-header-menu">
+            <ul>
+                <a class="a-gradient" href=""><li>Inicio</li></a>
+                <a class="a-gradient" href=""><li>Catalogo</li></a>
+                <a class="a-gradient" href=""><li>Sobre Nosotros</li></a>
+                <a class="a-gradient" href="login/"><li>Inicar Sesion</li></a>
+            </ul>
+        </div>
+    </header>
+    <!-- Slider de imagenes -->
+    <div class="index-slider">
+        <ul>
+            <li>
+                <a href="">
+                    <img alt="No se pudo encontrar la foto" src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_xl_2x/f_auto/primary/mjzflyuy5cf19d42de0n" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img alt="No se pudo encontrar la foto" src="https://www.eluniversal.com.mx/resizer/ZUPeMzs9-66Jj-ohz51jP_3woUY=/1100x666/cloudfront-us-east-1.images.arcpublishing.com/eluniversal/VHARRZAN7BDA7INSJ6BYXAD3IE.jpg" alt="">
+                </a>
+            </li>
+
+
+            <li>
+                <a href="">
+                    <img alt="No se pudo encontrar la foto" src="https://i.pinimg.com/originals/a8/0a/34/a80a34141019db37f32045f2a9e8844c.jpg" alt="">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img alt="No se pudo encontrar la foto" src="https://e00-mx-marca.uecdn.es/mx/assets/multimedia/imagenes/2023/11/30/17013711567164.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="py-2">
+
+    </div>
+
+    <!-- Cards con informacion -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="https://www.record.com.mx/sites/default/files/styles/v2-crop768x433/public/articulos/2021/12/20/pumas_cabeza.jpg?itok=qYBBZAUZ" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Equipo</h5>
+              <p class="card-text">Todo sobre los jugadores de Pumas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://images2.minutemediacdn.com/image/upload/c_crop,w_3270,h_1839,x_0,y_250/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/GettyImages/mmsport/90min_es_international_web/01gj62c2842pjk7t5ayb.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Actualizaciones</h5>
+              <p class="card-text">Las actualizaciones sobre el club Universidad Nacional de Mexico</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrG1SXirmIcZGKqNViD1ILxBZVPoT0B9tS8Q&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Altas y Bajas del Mercado </h5>
+              <p class="card-text">Enterate de todas las Bajas y Altas del Club</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  
+    
+</body>
+</html>
+

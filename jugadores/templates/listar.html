@@ -1,0 +1,51 @@
+
+<!-- Traer formato del archivo base.html -->
+{% extends "./base.html" %}
+
+<!-- Cambiar Titulo de la pagina -->
+{% block title %} Gestion de Jugadores {% endblock %}
+
+<!-- Usar como contenedor para el body con todo el formato del archivo base.html -->
+{% block body %}
+<div class="row">
+    <div class="justify-content-md-end">
+        <a href="/login/gestion/" class="btn btn-primary">Ingresar Nuevo Jugador &#43;</a>
+    </div>
+   
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h2 align="center">Jugadores Registrados en el Plantel</h2>
+        
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                       
+                        <th>Numero de Camiseta</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+
+                <tbody >
+                    <!-- ciclo for para buscar en el objeto que mande de views.py -->
+                    {% for c in jugadores %}
+                    <tr >
+                        <!-- forloop.counter se usa para enumarar la busqueda -->
+                        <td>{{forloop.counter}}</td>  
+                        <td>{{ c.codigo }}</td>
+                        <td>{{ c.nombre }}</td>
+                        <td>{{ c.numero }}</td>
+                        <!-- enviar el codigo atraves de la url para especificar el jugador -->
+                        <td><a href="editar/{{c.codigo}}" class=" btn btn-info">Editar</a></td>
+                        <td><a href="eliminar/{{c.codigo}}" class=" btn btn-danger">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
