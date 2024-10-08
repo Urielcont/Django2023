@@ -1,0 +1,121 @@
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration-style: none;
+}
+
+/* Estilo para todas las etiquetas a con linea gradiante */
+.a-gradient{
+   text-decoration: none;
+}
+.a-gradient:hover{ 
+    background: linear-gradient(to right, rgb(255,255,255), rgb(165,139,77));
+    background-position: bottom;
+    background-size: 80% 2px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+
+}
+
+
+.index-header{
+    background-color: #21203F;
+    max-height: 100px;
+    color: white;
+    display: flex;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.index-header-logo{
+    align-self: center;
+    margin: 20px;
+}
+.index-header-logo img{
+ width: 50%;
+ position: relative;
+}
+
+.index-header-menu{
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+    align-self: flex-end;
+    text-align: center;
+    /* background-color: aqua; */
+    display: flex;
+    align-self: center; 
+   
+}
+.index-header-menu ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.index-header-menu ul li{
+    
+    font-size: 1.7vmax;
+    margin: 12px;
+    color: #DCAD5B;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.index-slider {
+	overflow: hidden;
+	width: 100%;
+    margin-top: 0;
+	}
+	
+.index-slider ul {
+	display: flex;
+	padding: 0;
+    margin: 0;
+	width: 400%;
+	animation: cambio 12s infinite alternate linear;
+	}
+	
+.index-slider li {
+	width: 100%;
+	list-style: none;
+	}
+	
+.index-slider img {
+	width: 100%;
+	height: 500px;
+	}
+	@media(min-width:576px) and (max-width:767px){
+	  .index-slider img{
+		width: 100%;
+		height: 400px;
+	  }
+	}
+  
+	@media(max-width:575px){
+	  .index-slider img{
+		width: 100%;
+		height: 200px;
+		
+	  }
+	  
+	}
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    30% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    65% {margin-left: -200%;}
+    75% {margin-left: -200%;}
+    
+    85% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+      
